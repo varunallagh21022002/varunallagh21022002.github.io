@@ -25,7 +25,7 @@ window.portfolioData = {
       tags: ["React", "Node.js", "WebRTC", "Socket.IO"],
       diagram: "intercoode",
       diagramLabel: "share → reason → review",
-      link: ""
+      link: "https://github.com/varunallagh21022002/intercoode-portfolio-source"
     },
     {
       title: "filleshareica",
@@ -47,15 +47,27 @@ window.portfolioData = {
       tags: ["Chrome extension", "Local controls", "Diagnostics"],
       diagram: "internetsp33d",
       diagramLabel: "focus → protect → measure",
-      link: ""
+      link: "https://github.com/varunallagh21022002/internetsp33d-extension"
     }
   ],
   papersRead: [
     {
+      title: "PowerMLP: An Efficient Version of KAN",
+      status: "AI paper read",
+      category: "paper-read",
+      filters: ["ai"],
+      summary: "An AAAI 2025 paper exploring a computationally efficient alternative to spline-based KANs.",
+      details: "Qiu and colleagues introduce PowerMLP and evaluate it against other architectures. The paper's results belong to its authors; a portfolio implementation will be linked only when verified.",
+      tags: ["AI", "AAAI 2025", "Neural networks"],
+      citation: "Ruichen Qiu et al. 2025. Proceedings of AAAI 39(19), pp. 20069–20076.",
+      diagram: "paper",
+      link: "https://doi.org/10.1609/aaai.v39i19.34210"
+    },
+    {
       title: "Fine-Tuning Medium-Scale LLMs for Joint Intent Classification and Slot Filling: A Data-Efficient and Cost-Effective Solution for SMEs",
       status: "Paper read",
       category: "paper-read",
-      filters: ["intent"],
+      filters: ["nlp", "intent"],
       summary: "A COLING Industry Track paper on LoRA adaptation of Llama-3-8B-Instruct for joint intent classification and slot filling.",
       details: "Aguirre et al. study English and Spanish MASSIVE under data scarcity. The published findings motivate careful adaptation work, but the paper’s methods and results are not presented as Varun’s implementation.",
       tags: ["COLING 2025", "LoRA", "MASSIVE"],
@@ -67,7 +79,7 @@ window.portfolioData = {
       title: "From Noise to Clarity: Filtering Real and LLM-Generated Samples for Enhanced Intent Detection",
       status: "Paper read",
       category: "paper-read",
-      filters: ["augmentation"],
+      filters: ["nlp", "augmentation"],
       summary: "An EMNLP Findings paper on filtering real and synthetic samples before intent detection.",
       details: "Huang et al. use topic modeling, distribution checks, and classifier signals to assess sample quality. Their published Banking-77 results are background from the paper, not project results.",
       tags: ["EMNLP 2025", "Sample filtering", "Banking-77"],
@@ -79,7 +91,7 @@ window.portfolioData = {
       title: "On Collaborating Small and Large Models For Few-shot Intent Detection",
       status: "Paper read",
       category: "paper-read",
-      filters: ["intent"],
+      filters: ["nlp", "intent"],
       summary: "An EMNLP Findings paper on combining a smaller classifier with an LLM for uncertain intent cases.",
       details: "Chen and Wang study offline augmentation and online reasoning with semantic trimming. The paper’s published BANKING77 numbers are not attributed to Varun.",
       tags: ["EMNLP 2025", "Few-shot", "Model collaboration"],
@@ -91,7 +103,7 @@ window.portfolioData = {
       title: "How DDAIR you? Disambiguated Data Augmentation for Intent Recognition",
       status: "Paper read",
       category: "paper-read",
-      filters: ["augmentation"],
+      filters: ["nlp", "augmentation"],
       summary: "An EACL 2026 short paper on detecting ambiguous LLM-generated intent examples and regenerating them.",
       details: "Castillo-López, Lombard, Semmar, and de Chalendar use sentence embeddings to compare generated examples against target and competing intents. No reproduction is claimed.",
       tags: ["EACL 2026", "Data augmentation", "Disambiguation"],
@@ -103,7 +115,7 @@ window.portfolioData = {
       title: "Novel utterance data augmentation for intent classification using large language models",
       status: "Paper read",
       category: "paper-read",
-      filters: ["augmentation"],
+      filters: ["nlp", "augmentation"],
       summary: "A Springer paper proposing LLM paraphrases followed by domain-specific word-embedding synonym replacement.",
       details: "Madrueño et al. report the authors’ financial-trading experiments. This page separates that published work from Varun’s executed adaptation, which appears under Papers Implemented.",
       tags: ["Springer 2025", "LLM augmentation", "Word embeddings"],

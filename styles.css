@@ -89,6 +89,9 @@ details p { margin:1rem 0; color:var(--muted); font-size:.86rem; }
 .research-section .filter-button { border-color:#46515b; color:#aeb8bf; }
 .research-section .filter-button:hover,.research-section .filter-button:focus-visible,.research-section .filter-button.is-active { border-color:var(--paper); color:var(--ink); background:var(--paper); }
 .research-list { border-top:1px solid #46515b; }
+.research-section .project-card { color:var(--ink); }
+.research-section .project-card .project-citation { color:#4b5863!important; }
+.research-section .project-card .project-citation a,.research-section .project-card .project-link { color:#8e301f; }
 .library-tabs { display:flex; flex-wrap:wrap; gap:.35rem; margin-bottom:1.6rem; border-bottom:1px solid #46515b; }
 .library-subheading { margin:0 0 .85rem; color:var(--paper); font: .78rem var(--mono); letter-spacing:.12em; text-transform:uppercase; }
 .library-tab { cursor:pointer; padding:.7rem .8rem; border:0; border-bottom:2px solid transparent; color:#aeb8bf; background:transparent; font:.68rem var(--mono); text-transform:uppercase; letter-spacing:.06em; }

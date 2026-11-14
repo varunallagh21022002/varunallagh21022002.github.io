@@ -31,7 +31,7 @@
     const diagramLabel = project.diagramLabel || (project.diagram === "paper" ? "study → verify → evaluate" : "question → model → evaluate");
     const isDoiLink = /^https:\/\/(doi\.org|dx\.doi\.org)\//i.test(String(project.link || ""));
     const citation = project.citation ? `<p class="project-citation">${escapeHtml(project.citation)}${isDoiLink ? ` · <a href="${escapeHtml(project.link)}" target="_blank" rel="noreferrer">DOI ↗</a>` : ""}</p>` : "";
-    const optionalLink = project.link && isSafeExternalLink(project.link) && !isDoiLink ? `<a class="project-link" href="${escapeHtml(project.link)}" target="_blank" rel="noreferrer">View project ↗</a>` : "";
+    const optionalLink = project.link && isSafeExternalLink(project.link) && !isDoiLink ? `<a class="project-link" href="${escapeHtml(project.link)}" target="_blank" rel="noreferrer">${kind === "engineering" ? "View source" : "Read paper"} ↗</a>` : "";
     return `<article class="project-card" data-filter-type="${escapeHtml(project.category)}"><div class="project-card-top"><span class="project-index">${String(index + 1).padStart(2, "0")}</span><span class="status-pill ${statusClass}">${escapeHtml(project.status)}</span></div><div class="diagram">${diagrams[project.diagram] || ""}<span class="diagram-label">${diagramLabel}</span></div><h3>${escapeHtml(project.title)}</h3><p>${escapeHtml(project.summary)}</p><div class="tag-list">${project.tags.map((tag) => `<span>${escapeHtml(tag)}</span>`).join("")}</div><details><summary>Read more <span aria-hidden="true">+</span></summary><p>${escapeHtml(project.details)}</p>${citation}${optionalLink}</details></article>`;
   }
 
