@@ -164,3 +164,7 @@ details p { margin:1rem 0; color:var(--muted); font-size:.86rem; }
   *,*::before,*::after { animation-duration:.01ms!important; animation-iteration-count:1!important; transition-duration:.01ms!important; }
   .js .reveal { opacity:1; transform:none; }
 }
+
+.research-evidence-link { display: inline-block; margin-top: 1.25rem; color: #fff; text-decoration: underline; text-underline-offset: .25em; }
+.research-evidence-link:focus-visible { outline: 3px solid #ffab91; outline-offset: 4px; }
+.project-link + .project-link { margin-left: 1rem; }

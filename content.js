@@ -7,7 +7,7 @@ window.portfolioData = {
   intro: "I build collaborative software and study language systems — moving between product questions, engineering constraints, and careful AI/NLP research.",
   aboutPrimary: "I’m Varun Allagh, an M.Tech by Research student in Computer Science and Engineering at Delhi Technological University. Before that, I completed a B.Tech in CSE with an AI/ML minor at Bhagwan Parshuram Institute of Technology, GGSIPU.",
   aboutSecondary: "My work balances software engineering with research. I like making systems people can use, then asking what the system is assuming, how it can be evaluated, and where the evidence stops.",
-  researchIntro: "The research side of my work is intentionally honest about stage and evidence: I study published NLP methods and have executed an adaptation of Madrueño et al. with different models and data, producing mixed evidence rather than an exact reproduction.",
+  researchIntro: "I study AI and NLP papers and explore their methods through small, documented experiments. Each notebook distinguishes measured results, simplifications, and work still in progress from the original authors’ findings.",
   skillsIntro: "A working toolkit across product engineering, real-time collaboration, data, and language understanding.",
   contactIntro: "I’m open to conversations about software engineering, AI/NLP research, technical collaboration, and thoughtful opportunities.",
   links: {
@@ -21,11 +21,12 @@ window.portfolioData = {
       status: "Engineering project",
       category: "collaboration",
       summary: "A collaborative technical interview platform for practicing problem-solving together, not just submitting answers.",
-      details: "INTERCOODE brings together shared coding, communication, and interview practice. The stated stack includes React, Node.js, WebRTC, Socket.IO, Judge0, and MediaPipe.",
+      details: "INTERCOODE brings together shared coding, communication, and interview practice. This project is based on the MIT-licensed CodePulse project by DakshL1; attribution and local setup are in the source repository. The linked static preview is an interface demonstration only, with no collaboration, authentication, or code execution connected.",
       tags: ["React", "Node.js", "WebRTC", "Socket.IO"],
       diagram: "intercoode",
       diagramLabel: "share → reason → review",
-      link: "https://github.com/varunallagh21022002/intercoode-portfolio-source"
+      link: "https://github.com/varunallagh21022002/intercoode-portfolio-source",
+      demoLink: "https://varunallagh21022002.github.io/intercoode-portfolio-source/"
     },
     {
       title: "filleshareica",
@@ -36,7 +37,7 @@ window.portfolioData = {
       tags: ["WebRTC", "File transfer", "Session chat"],
       diagram: "filleshareica",
       diagramLabel: "approve → transfer → save",
-      link: ""
+      link: "https://github.com/varunallagh21022002/filleshareica-source-snapshot"
     },
     {
       title: "InternetSp33d",
@@ -57,7 +58,7 @@ window.portfolioData = {
       category: "paper-read",
       filters: ["ai"],
       summary: "An AAAI 2025 paper exploring a computationally efficient alternative to spline-based KANs.",
-      details: "Qiu and colleagues introduce PowerMLP and evaluate it against other architectures. The paper's results belong to its authors; a portfolio implementation will be linked only when verified.",
+      details: "Qiu and colleagues introduce PowerMLP and evaluate it against other architectures. The paper's results belong to its authors; a small-scale adaptation appears under Papers Implemented.",
       tags: ["AI", "AAAI 2025", "Neural networks"],
       citation: "Ruichen Qiu et al. 2025. Proceedings of AAAI 39(19), pp. 20069–20076.",
       diagram: "paper",
@@ -127,6 +128,18 @@ window.portfolioData = {
   papersWritten: [],
   papersImplemented: [
     {
+      title: "PowerMLP: a small-scale adaptation",
+      status: "Executed adaptation · AI",
+      category: "paper-implemented",
+      summary: "A small NumPy experiment using the paper’s PowerMLP layer formula on synthetic regression data.",
+      details: "This experiment compares a small adaptation with a ReLU MLP. It is not the authors’ full architecture or benchmark; its saved results are from this run only.",
+      tags: ["AI", "PowerMLP", "Synthetic regression"],
+      citation: "Original paper: Qiu et al., AAAI 2025.",
+      diagram: "paper",
+      link: "https://doi.org/10.1609/aaai.v39i19.34210",
+      evidenceLink: "https://github.com/varunallagh21022002/ai-ml-paper-evidence/tree/main/powermlp-aaai-2025"
+    },
+    {
       title: "Executed adaptation of Madrueño et al.",
       status: "Adaptation executed · mixed evidence",
       category: "paper-implemented",
@@ -135,7 +148,8 @@ window.portfolioData = {
       tags: ["Executed notebook", "Average precision", "Mixed evidence"],
       citation: "Original paper: Madrueño et al., Neural Computing and Applications 37, 26711–26736 (2025).",
       diagram: "paper",
-      link: "https://doi.org/10.1007/s00521-025-11642-3"
+      link: "https://doi.org/10.1007/s00521-025-11642-3",
+      evidenceLink: "https://github.com/varunallagh21022002/ai-ml-paper-evidence/tree/main/paper-5-novel-utterance"
     }
   ],
   experience: [

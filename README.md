@@ -19,8 +19,8 @@ Most portfolio content lives in [`content.js`](content.js), in the `window.portf
 - Update the intro, about, research, skills, education, experience, and contact copy.
 - Add engineering work to `engineeringProjects`.
 - Add papers read to `papersRead`, authored work to `papersWritten`, and executed studies/adaptations to `papersImplemented`.
-- Engineering entries support `title`, `status`, `category`, `summary`, `details`, `tags`, `diagram`, `diagramLabel`, and optional `link`.
-- Paper entries additionally support `filters`, `citation`, and an optional public `link`. Use explicit categories/filters rather than matching display status strings.
+- Engineering entries support `title`, `status`, `category`, `summary`, `details`, `tags`, `diagram`, `diagramLabel`, and optional source `link` and `demoLink`.
+- Paper entries additionally support `filters`, `citation`, an optional public paper `link`, and an optional `evidenceLink` to a notebook or its repository. Use explicit categories/filters rather than matching display status strings.
 - Keep papers read, papers written, and papers implemented distinct. A paper implementation should say whether it is an adaptation, exact reproduction, or partial evidence; never transfer the paper authors’ results to Varun.
 - Update social links in `links`.
 
@@ -62,4 +62,4 @@ The page structure and no-JavaScript fallback are in `index.html`; visual styles
 3. In **Settings → Pages**, choose **Deploy from a branch**, select the branch and `/ (root)` folder, then save.
 4. Because all CSS, JavaScript, and image references are relative, the site also works when served from a repository subpath.
 
-No deployment, push, or commit is performed by this project.
+After pushing updates, GitHub Pages rebuilds the published site from the configured branch. Check the Actions or Pages settings if changes do not appear immediately.
