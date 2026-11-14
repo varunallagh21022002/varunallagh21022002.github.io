@@ -6,6 +6,21 @@
   const isSafeExternalLink = (value) => /^https?:\/\//i.test(String(value || ""));
   document.documentElement.classList.add("js");
 
+  const quote = $(".hero-quote");
+  if (quote) {
+    let pinned = false;
+    let hovering = false;
+    let keyboardFocused = false;
+    const syncQuote = () => { quote.open = pinned || hovering || keyboardFocused; };
+    quote.open = false;
+    $("summary", quote).addEventListener("click", (event) => { event.preventDefault(); pinned = !pinned; syncQuote(); });
+    quote.addEventListener("pointerenter", (event) => { if (event.pointerType === "mouse") { hovering = true; syncQuote(); } });
+    quote.addEventListener("pointerleave", (event) => { if (event.pointerType === "mouse") { hovering = false; syncQuote(); } });
+    quote.addEventListener("focusin", (event) => { keyboardFocused = event.target.matches(":focus-visible"); syncQuote(); });
+    quote.addEventListener("focusout", (event) => { if (!quote.contains(event.relatedTarget)) { keyboardFocused = false; syncQuote(); } });
+    quote.addEventListener("keydown", (event) => { if (event.key === "Escape") { pinned = false; keyboardFocused = false; hovering = false; syncQuote(); } });
+  }
+
   $$("[data-content]").forEach((element) => {
     const key = element.dataset.content;
     if (data[key]) element.textContent = data[key];
