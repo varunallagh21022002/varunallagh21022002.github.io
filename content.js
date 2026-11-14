@@ -4,12 +4,12 @@
  * the semantic HTML fallback with filters and expandable data-driven details.
  */
 window.portfolioData = {
-  intro: "I build collaborative software and study language systems — moving between product questions, engineering constraints, and careful AI/NLP research.",
+  intro: "I build collaborative software and explore AI/ML — moving between product questions, engineering constraints, and careful research.",
   aboutPrimary: "I’m Varun Allagh, an M.Tech by Research student in Computer Science and Engineering at Delhi Technological University. Before that, I completed a B.Tech in CSE with an AI/ML minor at Bhagwan Parshuram Institute of Technology, GGSIPU.",
   aboutSecondary: "My work balances software engineering with research. I like making systems people can use, then asking what the system is assuming, how it can be evaluated, and where the evidence stops.",
-  researchIntro: "I study AI and NLP papers and explore their methods through small, documented experiments. Each notebook distinguishes measured results, simplifications, and work still in progress from the original authors’ findings.",
+  researchIntro: "I study AI/ML papers and explore their methods through small, documented experiments. Each notebook distinguishes measured results, simplifications, and work still in progress from the original authors’ findings.",
   skillsIntro: "A working toolkit across product engineering, real-time collaboration, data, and language understanding.",
-  contactIntro: "I’m open to conversations about software engineering, AI/NLP research, technical collaboration, and thoughtful opportunities.",
+  contactIntro: "I’m open to conversations about software engineering, AI/ML research, technical collaboration, and thoughtful opportunities.",
   links: {
     email: "mailto:varunallagh21022002@gmail.com",
     github: "https://github.com/varunallagh21022002",
@@ -129,7 +129,7 @@ window.portfolioData = {
   papersImplemented: [
     {
       title: "PowerMLP: a small-scale adaptation",
-      status: "Executed adaptation · AI",
+      status: "Colab-executed adaptation · AI",
       category: "paper-implemented",
       summary: "A small NumPy experiment using the paper’s PowerMLP layer formula on synthetic regression data.",
       details: "This experiment compares a small adaptation with a ReLU MLP. It is not the authors’ full architecture or benchmark; its saved results are from this run only.",
@@ -141,10 +141,10 @@ window.portfolioData = {
     },
     {
       title: "Executed adaptation of Madrueño et al.",
-      status: "Adaptation executed · mixed evidence",
+      status: "Colab-executed · mixed evidence",
       category: "paper-implemented",
       summary: "An executed adaptation using Qwen2.5 0.5B Instruct, Reuters Word2Vec, MiniLM, and TF-IDF on the authors’ public evaluation workbooks.",
-      details: "This is an executed adaptation, not an exact reproduction, and does not claim the authors’ results. It uses Qwen2.5 0.5B Instruct, Reuters Word2Vec, MiniLM, and TF-IDF with different data sources. General MiniLM average precision was 0.736 original, 0.758 LLM-only, 0.733 Word2Vec-only, and 0.750 combined; General + financial was 0.713, 0.713, 0.692, and 0.696. The mixed evidence does not reproduce the paper’s stronger financial-domain improvement.",
+      details: "This Colab-executed adaptation uses Qwen2.5 0.5B Instruct, Reuters Word2Vec, MiniLM, and TF-IDF. It is not an exact reproduction and does not claim the authors’ results. The experiment produced mixed results; see the notebook for the actual scores and limitations.",
       tags: ["Executed notebook", "Average precision", "Mixed evidence"],
       citation: "Original paper: Madrueño et al., Neural Computing and Applications 37, 26711–26736 (2025).",
       diagram: "paper",
@@ -162,7 +162,7 @@ window.portfolioData = {
     { name: "Languages", items: "C++ · Python · SQL · JavaScript" },
     { name: "Web & real-time", items: "React · Node.js · Socket.IO · WebRTC · REST APIs" },
     { name: "Systems & tools", items: "Git · Docker · Judge0 · MediaPipe" },
-    { name: "AI / NLP", items: "NLP · intent classification · text preprocessing · language-model evaluation" }
+    { name: "AI / ML", items: "NLP · intent classification · text preprocessing · language-model evaluation" }
   ],
   education: [
     { period: "2026 — May 2028 expected", degree: "M.Tech by Research — Computer Science & Engineering", school: "Delhi Technological University", note: "Current research-led postgraduate study." },
