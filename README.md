@@ -17,9 +17,11 @@ Then open <http://localhost:8000>. Opening `index.html` directly also works, but
 Most portfolio content lives in [`content.js`](content.js), in the `window.portfolioData` object:
 
 - Update the intro, about, research, skills, education, experience, and contact copy.
-- Add engineering work to `engineeringProjects` and research or paper studies to `researchProjects`.
-- Each project supports `title`, `status`, `summary`, `details`, `tags`, and `diagram`.
-- Research statuses should distinguish ongoing work from paper studies. Keep results proportional to the evidence available.
+- Add engineering work to `engineeringProjects`.
+- Add papers read to `papersRead`, authored work to `papersWritten`, and executed studies/adaptations to `papersImplemented`.
+- Engineering entries support `title`, `status`, `category`, `summary`, `details`, `tags`, `diagram`, `diagramLabel`, and optional `link`.
+- Paper entries additionally support `filters`, `citation`, and an optional public `link`. Use explicit categories/filters rather than matching display status strings.
+- Keep papers read, papers written, and papers implemented distinct. A paper implementation should say whether it is an adaptation, exact reproduction, or partial evidence; never transfer the paper authors’ results to Varun.
 - Update social links in `links`.
 
 ### Example project
@@ -31,11 +33,12 @@ Most portfolio content lives in [`content.js`](content.js), in the `window.portf
   summary: "One factual sentence visible on the card.",
   details: "A fuller explanation. Avoid invented metrics, links, or implementations.",
   tags: ["React", "NLP"],
-  diagram: "graph"
+  diagram: "intercoode",
+  diagramLabel: "share → reason → review"
 }
 ```
 
-Use one of the existing diagram keys (`intercoode`, `graph`, `intent`, `hinglish`, or `paper`) or add a new SVG entry in `script.js`.
+Use one of the existing diagram keys (`intercoode`, `fileshareica`, `internetsp33d`, `intent`, `filter`, `disambiguate`, `hinglish`, or `paper`) or add a new SVG entry in `script.js`. Give each engineering project its own `diagramLabel`; labels should describe that project's actual flow rather than reuse a generic engineering phrase.
 
 ### Example research entry
 

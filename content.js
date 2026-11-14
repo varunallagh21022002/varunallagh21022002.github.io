@@ -7,7 +7,7 @@ window.portfolioData = {
   intro: "I build collaborative software and study language systems — moving between product questions, engineering constraints, and careful AI/NLP research.",
   aboutPrimary: "I’m Varun Allagh, an M.Tech by Research student in Computer Science and Engineering at Delhi Technological University. Before that, I completed a B.Tech in CSE with an AI/ML minor at Bhagwan Parshuram Institute of Technology, GGSIPU.",
   aboutSecondary: "My work balances software engineering with research. I like making systems people can use, then asking what the system is assuming, how it can be evaluated, and where the evidence stops.",
-  researchIntro: "The research side of my work is intentionally honest about stage and evidence: some directions are ongoing, and one paper implementation has only reached verified data loading so far.",
+  researchIntro: "The research side of my work is intentionally honest about stage and evidence: I study published NLP methods and have executed an adaptation of Madrueño et al. with different models and data, producing mixed evidence rather than an exact reproduction.",
   skillsIntro: "A working toolkit across product engineering, real-time collaboration, data, and language understanding.",
   contactIntro: "I’m open to conversations about software engineering, AI/NLP research, technical collaboration, and thoughtful opportunities.",
   links: {
@@ -24,52 +24,105 @@ window.portfolioData = {
       details: "INTERCOODE brings together shared coding, communication, and interview practice. The stated stack includes React, Node.js, WebRTC, Socket.IO, Judge0, and MediaPipe.",
       tags: ["React", "Node.js", "WebRTC", "Socket.IO"],
       diagram: "intercoode",
+      diagramLabel: "share → reason → review",
+      link: ""
+    },
+    {
+      title: "filleshareica",
+      status: "Implemented local product",
+      category: "file-sharing",
+      summary: "A private file-transfer and chat workspace for moving files between phones and computers through approved sessions.",
+      details: "The local implementation supports two-device or group sessions, QR or invitation joining, participant approval, multiple file transfer in either direction, session chat, encrypted WebRTC data channels, and browser save/download flows. The hosted website remains unchanged until deployed separately.",
+      tags: ["WebRTC", "File transfer", "Session chat"],
+      diagram: "filleshareica",
+      diagramLabel: "approve → transfer → save",
+      link: ""
+    },
+    {
+      title: "InternetSp33d",
+      status: "Implemented desktop beta",
+      category: "browser-extension",
+      summary: "A Chrome extension beta for local focus, protection, data-saver controls, and measurement workflows.",
+      details: "The extension runs its controls and history locally. Its documentation explicitly says it cannot increase ISP capacity, bond networks, or control other apps; no store release or public product link is claimed here.",
+      tags: ["Chrome extension", "Local controls", "Diagnostics"],
+      diagram: "internetsp33d",
+      diagramLabel: "focus → protect → measure",
       link: ""
     }
   ],
-  researchProjects: [
+  papersRead: [
     {
-      title: "Research-paper recommendation",
-      status: "Research direction",
-      category: "graph-methods",
-      summary: "Exploring graph methods for navigating relationships between papers, concepts, and scholarly signals.",
-      details: "The direction includes GCNs, Spektral, autoencoders, centrality, and VoteRank. It is presented as research work in progress; no results or completed implementation are claimed here.",
-      tags: ["GCN / Spektral", "Autoencoders", "Centrality", "VoteRank"],
-      diagram: "graph",
-      citation: "",
-      link: ""
-    },
-    {
-      title: "English SNIPS intent classification",
-      status: "Ongoing",
-      category: "intent-classification",
-      summary: "An ongoing study of intent classification with the English SNIPS dataset.",
-      details: "The work is focused on data, categories, preprocessing, and careful evaluation. Results are not claimed here.",
-      tags: ["NLP", "Intent classification", "SNIPS"],
-      diagram: "intent",
-      citation: "",
-      link: ""
-    },
-    {
-      title: "Hinglish NLP preprocessing",
-      status: "Ongoing",
-      category: "code-mixed-language",
-      summary: "Exploring preprocessing questions for Hinglish and other code-mixed language inputs.",
-      details: "This is ongoing work. No specific Hinglish dataset, benchmark, or result is claimed without verification.",
-      tags: ["Hinglish", "Code-mixed language", "Preprocessing"],
-      diagram: "hinglish",
-      citation: "",
-      link: ""
-    },
-    {
-      title: "Novel Utterance Data Augmentation for Intent Classification Using Large Language Models",
-      status: "Paper study · implementation partial",
-      category: "paper-study",
-      summary: "Studying the paper and its implementation path; data loading has been verified, but end-to-end augmentation and evaluation have not been executed.",
-      details: "This entry describes a study of the paper, not the authors’ results as Varun’s. Current evidence covers verified data loading only. There is no claim of a completed reproduction or reproduced metric.",
-      tags: ["Paper study", "Data loading verified", "Evaluation pending"],
+      title: "Fine-Tuning Medium-Scale LLMs for Joint Intent Classification and Slot Filling: A Data-Efficient and Cost-Effective Solution for SMEs",
+      status: "Paper read",
+      category: "paper-read",
+      filters: ["intent"],
+      summary: "A COLING Industry Track paper on LoRA adaptation of Llama-3-8B-Instruct for joint intent classification and slot filling.",
+      details: "Aguirre et al. study English and Spanish MASSIVE under data scarcity. The published findings motivate careful adaptation work, but the paper’s methods and results are not presented as Varun’s implementation.",
+      tags: ["COLING 2025", "LoRA", "MASSIVE"],
+      citation: "Maia Aguirre, Ariane Méndez, Arantza del Pozo, María Inés Torres, and Manuel Torralbo. 2025. COLING Industry Track, pp. 251–262.",
       diagram: "paper",
-      citation: "Madrueño et al., Neural Computing and Applications 37, 26711–26736 (2025)",
+      link: "https://aclanthology.org/2025.coling-industry.21/"
+    },
+    {
+      title: "From Noise to Clarity: Filtering Real and LLM-Generated Samples for Enhanced Intent Detection",
+      status: "Paper read",
+      category: "paper-read",
+      filters: ["augmentation"],
+      summary: "An EMNLP Findings paper on filtering real and synthetic samples before intent detection.",
+      details: "Huang et al. use topic modeling, distribution checks, and classifier signals to assess sample quality. Their published Banking-77 results are background from the paper, not project results.",
+      tags: ["EMNLP 2025", "Sample filtering", "Banking-77"],
+      citation: "Junbao Huang, Weizhen Li, Peijie Huang, and Yuhong Xu. 2025. Findings of EMNLP, pp. 21736–21746.",
+      diagram: "filter",
+      link: "https://aclanthology.org/2025.findings-emnlp.1186/"
+    },
+    {
+      title: "On Collaborating Small and Large Models For Few-shot Intent Detection",
+      status: "Paper read",
+      category: "paper-read",
+      filters: ["intent"],
+      summary: "An EMNLP Findings paper on combining a smaller classifier with an LLM for uncertain intent cases.",
+      details: "Chen and Wang study offline augmentation and online reasoning with semantic trimming. The paper’s published BANKING77 numbers are not attributed to Varun.",
+      tags: ["EMNLP 2025", "Few-shot", "Model collaboration"],
+      citation: "Peng Chen and Bang Wang. 2025. Findings of EMNLP, pp. 13937–13953.",
+      diagram: "intent",
+      link: "https://aclanthology.org/2025.findings-emnlp.749/"
+    },
+    {
+      title: "How DDAIR you? Disambiguated Data Augmentation for Intent Recognition",
+      status: "Paper read",
+      category: "paper-read",
+      filters: ["augmentation"],
+      summary: "An EACL 2026 short paper on detecting ambiguous LLM-generated intent examples and regenerating them.",
+      details: "Castillo-López, Lombard, Semmar, and de Chalendar use sentence embeddings to compare generated examples against target and competing intents. No reproduction is claimed.",
+      tags: ["EACL 2026", "Data augmentation", "Disambiguation"],
+      citation: "Galo Castillo-López, Alexis Lombard, Nasredine Semmar, and Gaël de Chalendar. 2026. EACL, Volume 2: Short Papers, pp. 274–286.",
+      diagram: "disambiguate",
+      link: "https://aclanthology.org/2026.eacl-short.20/"
+    },
+    {
+      title: "Novel utterance data augmentation for intent classification using large language models",
+      status: "Paper read",
+      category: "paper-read",
+      filters: ["augmentation"],
+      summary: "A Springer paper proposing LLM paraphrases followed by domain-specific word-embedding synonym replacement.",
+      details: "Madrueño et al. report the authors’ financial-trading experiments. This page separates that published work from Varun’s executed adaptation, which appears under Papers Implemented.",
+      tags: ["Springer 2025", "LLM augmentation", "Word embeddings"],
+      citation: "Madrueño et al., Neural Computing and Applications 37, 26711–26736 (2025).",
+      diagram: "paper",
+      link: "https://doi.org/10.1007/s00521-025-11642-3"
+    }
+  ],
+  papersWritten: [],
+  papersImplemented: [
+    {
+      title: "Executed adaptation of Madrueño et al.",
+      status: "Adaptation executed · mixed evidence",
+      category: "paper-implemented",
+      summary: "An executed adaptation using Qwen2.5 0.5B Instruct, Reuters Word2Vec, MiniLM, and TF-IDF on the authors’ public evaluation workbooks.",
+      details: "This is an executed adaptation, not an exact reproduction, and does not claim the authors’ results. It uses Qwen2.5 0.5B Instruct, Reuters Word2Vec, MiniLM, and TF-IDF with different data sources. General MiniLM average precision was 0.736 original, 0.758 LLM-only, 0.733 Word2Vec-only, and 0.750 combined; General + financial was 0.713, 0.713, 0.692, and 0.696. The mixed evidence does not reproduce the paper’s stronger financial-domain improvement.",
+      tags: ["Executed notebook", "Average precision", "Mixed evidence"],
+      citation: "Original paper: Madrueño et al., Neural Computing and Applications 37, 26711–26736 (2025).",
+      diagram: "paper",
       link: "https://doi.org/10.1007/s00521-025-11642-3"
     }
   ],
@@ -83,7 +136,7 @@ window.portfolioData = {
     { name: "Languages", items: "C++ · Python · SQL · JavaScript" },
     { name: "Web & real-time", items: "React · Node.js · Socket.IO · WebRTC · REST APIs" },
     { name: "Systems & tools", items: "Git · Docker · Judge0 · MediaPipe" },
-    { name: "AI / NLP", items: "NLP · GNN / GCN · Spektral · Autoencoders · Centrality · VoteRank" }
+    { name: "AI / NLP", items: "NLP · intent classification · text preprocessing · language-model evaluation" }
   ],
   education: [
     { period: "2026 — May 2028 expected", degree: "M.Tech by Research — Computer Science & Engineering", school: "Delhi Technological University", note: "Current research-led postgraduate study." },
