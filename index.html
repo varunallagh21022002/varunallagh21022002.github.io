@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101c2c" />
+    <meta name="description" content="Portfolio of Varun Allagh — software engineer and AI/NLP researcher." />
+    <title>Varun Allagh — Software Engineer & AI/NLP Researcher</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="#top" aria-label="Varun Allagh home"><span class="brand-mark">VA</span><span>Varun Allagh</span></a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="sr-only">Toggle navigation</span><span></span><span></span></button>
+        <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+          <a href="#about">About</a><a href="#engineering">Engineering</a><a href="#research">Research</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+        </nav>
+      </header>
+
+      <main id="main-content">
+        <section id="top" class="hero section-grid" aria-labelledby="hero-title">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="eyebrow-dot"></span> Software engineering + AI/NLP research</p>
+            <h1 id="hero-title">Hi, I’m <span>Varun Allagh.</span><br />I build systems<br /><em>worth understanding.</em></h1>
+            <p class="hero-lede" data-content="intro">I build collaborative software and study language systems — moving between product questions, engineering constraints, and careful AI/NLP research.</p>
+            <div class="hero-actions"><a class="button button-primary" href="#engineering">See the work <span aria-hidden="true">↗</span></a><a class="button button-quiet" href="#contact">Get in touch <span aria-hidden="true">→</span></a></div>
+            <div class="hero-meta" aria-label="Current academic status"><span>New Delhi, India</span><span class="meta-separator">/</span><span>M.Tech by Research, DTU</span></div>
+          </div>
+          <div class="hero-visual">
+            <div class="portrait-frame"><div class="portrait-accent portrait-accent-top"></div><img src="assets/varun-allagh.jpeg" alt="Portrait of Varun Allagh" /><div class="portrait-caption"><span>01</span><span>Engineer / Researcher</span></div></div>
+            <div class="hero-note"><span class="note-line"></span><span>Curious about the space<br />between people and systems.</span></div>
+          </div>
+        </section>
+
+        <section id="about" class="section section-grid about-section" aria-labelledby="about-title">
+          <div class="section-label"><span>01</span><span>About</span></div>
+          <div class="section-content"><h2 id="about-title">Thoughtful products.<br /><span>Grounded research.</span></h2><div class="about-columns"><p data-content="aboutPrimary">I’m Varun Allagh, an M.Tech by Research student in Computer Science and Engineering at Delhi Technological University. Before that, I completed a B.Tech in CSE with an AI/ML minor at Bhagwan Parshuram Institute of Technology, GGSIPU.</p><p data-content="aboutSecondary">My work balances software engineering with research. I like making systems people can use, then asking what the system is assuming, how it can be evaluated, and where the evidence stops.</p></div><div class="principles"><div class="principle"><span>01</span><strong>Make it useful</strong><p>Start from the user, not the novelty.</p></div><div class="principle"><span>02</span><strong>Stay rigorous</strong><p>Keep claims proportional to evidence.</p></div><div class="principle"><span>03</span><strong>Keep learning</strong><p>Use every project to sharpen the next question.</p></div></div></div>
+        </section>
+
+        <section id="engineering" class="section work-section" aria-labelledby="engineering-title">
+          <div class="section-heading"><div class="section-label"><span>02</span><span>Engineering</span></div><h2 id="engineering-title">Software that makes<br /><span>shared work possible.</span></h2><p>Product-minded engineering across collaboration, real-time systems, and interview practice.</p></div>
+          <div class="filter-row" aria-label="Filter engineering projects"><span class="filter-label">Focus</span><button class="filter-button is-active" type="button" aria-pressed="true" data-filter-group="engineering" data-filter="all">All</button><button class="filter-button" type="button" aria-pressed="false" data-filter-group="engineering" data-filter="collaboration">Collaborative systems</button></div>
+          <div id="engineering-grid" class="project-grid">
+            <article class="project-card"><div class="project-card-top"><span class="project-index">01</span><span class="status-pill">Engineering project</span></div><div class="diagram diagram-intercoode" aria-hidden="true"><svg viewBox="0 0 640 180" role="img"><rect x="12" y="24" width="190" height="132" rx="4"/><rect x="222" y="24" width="190" height="132" rx="4"/><rect x="432" y="24" width="196" height="132" rx="4"/><path d="M202 90h20M412 90h20"/><circle cx="542" cy="68" r="13"/><path d="M542 96v28m-18-12 18 12 18-12"/><path d="M42 54h102M42 72h78M252 54h110M252 72h78"/></svg><span class="diagram-label">share → reason → review</span></div><h3>INTERCOODE</h3><p>A collaborative technical interview platform for practicing problem-solving together, not just submitting answers.</p><div class="tag-list"><span>React</span><span>Node.js</span><span>WebRTC</span><span>Socket.IO</span></div><details><summary>Read more <span aria-hidden="true">+</span></summary><p>INTERCOODE brings together shared coding, communication, and interview practice. The stated stack includes React, Node.js, WebRTC, Socket.IO, Judge0, and MediaPipe.</p></details></article>
+          </div>
+        </section>
+
+        <section id="research" class="section research-section" aria-labelledby="research-title">
+          <div class="research-intro"><div class="section-label"><span>03</span><span>Research + paper studies</span></div><h2 id="research-title">Questions worth<br /><span>staying with.</span></h2><p data-content="researchIntro">The research side of my work is intentionally honest about stage and evidence: some directions are ongoing, and one paper implementation has only reached verified data loading so far.</p></div>
+          <div><div class="filter-row research-filters" aria-label="Filter research"><span class="filter-label">Focus</span><button class="filter-button is-active" type="button" aria-pressed="true" data-filter-group="research" data-filter="all">All</button><button class="filter-button" type="button" aria-pressed="false" data-filter-group="research" data-filter="graph-methods">Graph methods</button><button class="filter-button" type="button" aria-pressed="false" data-filter-group="research" data-filter="intent-classification">Intent classification</button><button class="filter-button" type="button" aria-pressed="false" data-filter-group="research" data-filter="code-mixed-language">Code-mixed language</button><button class="filter-button" type="button" aria-pressed="false" data-filter-group="research" data-filter="paper-study">Paper study</button></div><div id="research-grid" class="research-list"><article class="research-item"><span class="research-number">01</span><div><h3>Research-paper recommendation</h3><p>Exploring graph methods for navigating relationships between papers, concepts, and scholarly signals.</p></div><span class="research-arrow" aria-hidden="true">↗</span></article><article class="research-item"><span class="research-number">02</span><div><h3>English SNIPS intent classification</h3><p>An ongoing study of intent classification with the English SNIPS dataset.</p></div><span class="research-arrow" aria-hidden="true">↗</span></article><article class="research-item"><span class="research-number">03</span><div><h3>Hinglish NLP preprocessing</h3><p>Exploring preprocessing questions for Hinglish and other code-mixed language inputs.</p></div><span class="research-arrow" aria-hidden="true">↗</span></article><article class="research-item"><span class="research-number">04</span><div><h3>Novel Utterance Data Augmentation for Intent Classification Using Large Language Models</h3><p>Paper study; data loading verified, end-to-end augmentation and evaluation not executed.</p><p class="research-citation">Madrueño et al., Neural Computing and Applications 37, 26711–26736 (2025) · <a href="https://doi.org/10.1007/s00521-025-11642-3" target="_blank" rel="noreferrer">DOI ↗</a></p></div><span class="research-arrow" aria-hidden="true">↗</span></article></div></div>
+        </section>
+
+        <section id="experience" class="section experience-section" aria-labelledby="experience-title">
+          <div class="section-label"><span>04</span><span>Experience</span></div><div class="experience-layout"><div><h2 id="experience-title">Learning by<br /><span>shipping and sharing.</span></h2></div><div id="experience-list" class="timeline"><article class="timeline-item"><span class="timeline-period">May — Jul 2024</span><div><h3>Web Developer Intern</h3><p>Celebal</p><small>React · REST APIs</small></div></article><article class="timeline-item"><span class="timeline-period">May — Aug 2024</span><div><h3>Contributor</h3><p>GirlScript Summer of Code</p><small>Open-source contribution program</small></div></article><article class="timeline-item"><span class="timeline-period">Sep — Oct 2023</span><div><h3>DSA Intern</h3><p>GeeksforGeeks</p><small>Data structures and algorithms</small></div></article><article class="timeline-item"><span class="timeline-period">Sep 2022 — Apr 2024</span><div><h3>Technical Team Member & Mentor</h3><p>NameSpace</p><small>Technical work and peer learning</small></div></article></div></div>
+        </section>
+
+        <section id="skills" class="section skills-section" aria-labelledby="skills-title"><div class="section-label"><span>05</span><span>Technical skills</span></div><div class="skills-layout"><div><h2 id="skills-title">A practical toolkit<br /><span>for ambiguous problems.</span></h2><p data-content="skillsIntro">A working toolkit across product engineering, real-time collaboration, data, and language understanding.</p></div><div id="skills-list" class="skills-list"><article class="skill-group"><h3>Languages</h3><p>C++ · Python · SQL · JavaScript</p></article><article class="skill-group"><h3>Web & real-time</h3><p>React · Node.js · Socket.IO · WebRTC · REST APIs</p></article><article class="skill-group"><h3>Systems & tools</h3><p>Git · Docker · Judge0 · MediaPipe</p></article><article class="skill-group"><h3>AI / NLP</h3><p>NLP · GNN / GCN · Spektral · Autoencoders · Centrality · VoteRank</p></article></div></div></section>
+
+        <section id="education" class="section education-section" aria-labelledby="education-title"><div class="section-label"><span>06</span><span>Education</span></div><div class="education-layout"><div><h2 id="education-title">The long way<br /><span>around a question.</span></h2></div><div id="education-list" class="timeline"><article class="timeline-item"><span class="timeline-period">2026 — May 2028 expected</span><div><h3>M.Tech by Research — Computer Science & Engineering</h3><p>Delhi Technological University</p><small>Current research-led postgraduate study.</small></div></article><article class="timeline-item"><span class="timeline-period">2021 — 2025</span><div><h3>B.Tech — Computer Science & Engineering, AI/ML minor</h3><p>Bhagwan Parshuram Institute of Technology, GGSIPU</p><small>CGPA 9.11 / 10.</small></div></article></div></div></section>
+
+        <section id="contact" class="section contact-section" aria-labelledby="contact-title"><div class="contact-card"><div class="section-label"><span>07</span><span>Contact</span></div><h2 id="contact-title">Have a question,<br /><em>problem, or idea?</em></h2><p data-content="contactIntro">I’m open to conversations about software engineering, AI/NLP research, technical collaboration, and thoughtful opportunities.</p><div class="contact-links"><a class="contact-link" data-link="email" href="mailto:varunallagh21022002@gmail.com"><span>Write an email</span><span aria-hidden="true">↗</span></a><a class="contact-link" data-link="github" href="https://github.com/varunallagh21022002" target="_blank" rel="noreferrer"><span>GitHub</span><span aria-hidden="true">↗</span></a><a class="contact-link" data-link="linkedin" href="https://www.linkedin.com/in/v21000/" target="_blank" rel="noreferrer"><span>LinkedIn</span><span aria-hidden="true">↗</span></a></div></div></section>
+      </main>
+      <footer class="site-footer"><span>© <span id="current-year">2026</span> Varun Allagh</span><span>Built for careful work.</span><a href="#top">Back to top ↑</a></footer>
+    </div>
+    <script src="content.js"></script><script src="script.js"></script>
+  </body>
+</html>
