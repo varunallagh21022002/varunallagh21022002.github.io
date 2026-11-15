@@ -8,17 +8,45 @@
 
   const quote = $(".hero-quote");
   if (quote) {
-    let pinned = false;
+    const summary = $("summary", quote);
     let hovering = false;
     let keyboardFocused = false;
-    const syncQuote = () => { quote.open = pinned || hovering || keyboardFocused; };
-    quote.open = false;
-    $("summary", quote).addEventListener("click", (event) => { event.preventDefault(); pinned = !pinned; syncQuote(); });
-    quote.addEventListener("pointerenter", (event) => { if (event.pointerType === "mouse") { hovering = true; syncQuote(); } });
-    quote.addEventListener("pointerleave", (event) => { if (event.pointerType === "mouse") { hovering = false; syncQuote(); } });
-    quote.addEventListener("focusin", (event) => { keyboardFocused = event.target.matches(":focus-visible"); syncQuote(); });
-    quote.addEventListener("focusout", (event) => { if (!quote.contains(event.relatedTarget)) { keyboardFocused = false; syncQuote(); } });
-    quote.addEventListener("keydown", (event) => { if (event.key === "Escape") { pinned = false; keyboardFocused = false; hovering = false; syncQuote(); } });
+    let explicitChoice = null;
+    const syncQuote = () => { quote.open = explicitChoice ?? (hovering || keyboardFocused); };
+    summary.addEventListener("click", (event) => {
+      event.preventDefault();
+      // An explicit toggle wins over hover/focus, including repeated keyboard or touch activation.
+      explicitChoice = !quote.open;
+      syncQuote();
+    });
+    quote.addEventListener("pointerenter", (event) => {
+      if (event.pointerType !== "mouse") return;
+      hovering = true;
+      explicitChoice = null;
+      syncQuote();
+    });
+    quote.addEventListener("pointerleave", (event) => {
+      if (event.pointerType !== "mouse") return;
+      hovering = false;
+      explicitChoice = null;
+      syncQuote();
+    });
+    summary.addEventListener("focus", () => {
+      keyboardFocused = summary.matches(":focus-visible");
+      if (keyboardFocused) explicitChoice = null;
+      syncQuote();
+    });
+    summary.addEventListener("blur", () => {
+      keyboardFocused = false;
+      explicitChoice = null;
+      syncQuote();
+    });
+    summary.addEventListener("keydown", (event) => {
+      if (event.key !== "Escape") return;
+      event.preventDefault();
+      explicitChoice = false;
+      syncQuote();
+    });
   }
 
   $$("[data-content]").forEach((element) => {
